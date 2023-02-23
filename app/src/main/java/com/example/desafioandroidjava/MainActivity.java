@@ -41,17 +41,17 @@ public class MainActivity extends AppCompatActivity {
             //Convertendo string para números
             Double valorAlcool = Double.parseDouble(precoAlcool);
             Double valorGasolina = Double.parseDouble(precoGasolina);
-            String texto;
-            if (valorAlcool / valorGasolina >= 0.7) {
-                texto = "É melhor utilizar gasolina";
+
         /* Fazer cálculo de menor preço
         Se (valorAlcool / valorGasolina) >= 0.7 é melhor utilizar gasolina
         se não é melhor utilizar álcool
         */
+            Double resultado = valorAlcool / valorGasolina;
+            if (resultado >= 0.7) {
+                textResultado.setText("Melhor utilizar Gasolina");
             }else {
-                texto = "É melhor utilizar álcool";
+                textResultado.setText("Melhor utilizar Álcool");
             }
-
         }
 
     }
@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return camposValidados;
+
     }
 
 
